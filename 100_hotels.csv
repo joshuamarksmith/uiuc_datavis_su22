@@ -1,0 +1,101 @@
+Hotel,Location,Country,Region,Company,Score,Rank,Rooms,Theme,Year
+Mahali Mzuri,Masai Mara,Kenya,Africa,Virgin Limited Edition,99.73,1,12,Safari,2013
+Nayara Tented Group,Arenal Volcano National Park,Costa Rica,Latin America,Nayara Resorts,99.58,2,29,Nature,2019
+The Opposite House,Beijing,China,Asia,Swire Properties,99.47,3,99,Contemporary ,2009
+Capella Bangkok,Bangkok,Thailand,Southeast Asia,Pontiac Land Group,99.38,4,101,Contemporary ,2020
+Capella Ubud,Bali,Indonesia,Southeast Asia,Pontiac Land Group,99.34,5,23,Nature,2018
+Grace Hotel,Santorini,Greece,Europe,Auberge Resorts Collection,99.18,6,139,Coastal,2008
+Kamalame Cay,Andros Island,Bahamas,Caribbean,David and Michael King-Hew,99.14,7,22,Island,1996
+The Oberoi Udaivilas,Udaipur,India,Southeast Asia,The Oberoi Group,99.12,8,87,Palace,2007
+The Temple House,Chengdu,China,Asia,Swire Properties,98.94,9,142,Contemporary ,2003
+The Oberoi New Delhi,New Delhi,India,Southeast Asia,The Oberoi Group,98.9,10,220,Contemporary ,1965
+Hotel Paracas,Paracas,Peru,Latin America,Marriott International,98.77,11,120,Coastal,1944
+Taj Holiday Village Resort & Spa,Goa,India,Southeast Asia,India Hotels Company Limited,98.76,12,142,Coastal,1978
+"Savute Elephant Lodge, A Belmond Safari",Chobe National Park,Botswana,Africa,LVMH,98.75,13,12,Safari,1992
+The Oberoi Vanyavilas Wildlife Resort,Ranthambhore,India,Southeast Asia,The Oberoi Group,98.72,14,25,Nature,2001
+Mandarin Oriental Milan,Milan,Italy,Europe,Jardine Matheson,98.67,15,104,Contemporary ,2015
+La Reserve Paris,Paris,France,Europe,Michel Reybier Hospitality Group,98.6,16,40,Contemporary ,2015
+Nobu Ryokan,Malibu,United States,North America," Chef Nobu, Robert De Niro, Meir Teper and Larry Ellison",98.59,17,16,Coastal,2017
+Soneva Fushi,Baa Atoll,Maldives,Southeast Asia,Soneva,98.59,17,64,Island,1995
+Shangri-La the Shard,London,England,Europe,Kerry Properties,98.57,19,202,Contemporary ,2014
+Alila Manggis,Bali,Indonesia,Southeast Asia,Hyatt,98.5,20,55,Nature,2014
+Phinda Vlei Lodge,KwaZulu Natal,South Africa,Africa,andBeyond,98.5,20,6,Safari,1996
+Il Sereno Lago di Como,Torno,Italy,Europe,Sereno Hotels,98.5,20,40,Coastal,2016
+Manoir Hovey,North Hatley,Canada,North America,Relais & Châteaux ,98.48,23,36,Coastal,1900
+Canaves Oia Epitome ,Santorini,Greece,Europe,Yiannis and Anna Chaidemenos,98.44,24,24,Coastal,2018
+Istanbul At Sultanahmet,Istanbul,Turkey,Middle East,Four Seasons,98.4,25,65,Palace,1996
+The Peninsula Manila,Manila,Philippines,Southeast Asia,Hongkong and Shanghai Hotels Ltd.,98.4,25,469,Palace,1976
+Hotel Il Pellicano,Porto Ercole,Italy,Europe,The Leading Hotels of the World Ltd.,98.32,27,47,Coastal,1965
+Hotel Fasano Boa Vista,Porto Feliz,Brazil ,Latin America,The Leading Hotels of the World Ltd.,98.25,28,39,Nature,2003
+Halekulani Okinawa,Okinawa,Japan,Asia,Mitsui Fudosan Group,98.21,29,360,Coastal,2019
+The Lake House on Canandaigua,New York,United States,North America,The Sands Family,98.14,30,124,Nature,1962
+Hyatt Regency Amritsar,Amritsar,India,Southeast Asia,Hyatt,98.14,31,248,Contemporary ,2008
+Leela Palace Udaipur,Udaipur,India,Southeast Asia,Brookfield Asset Management,98.13,32,80,Palace,2009
+Nayara Gardens,Arenal Volcano National Park,Costa Rica,Latin America,Nayara Resorts,98.13,33,50,Nature,2007
+Pickering House Inn,Wolfeboro,United States,North America,Peter and Patty Cooke ,98.11,34,10,Contemporary ,2018
+Rancho Valencia Resort & Spa,San Diego,United States,North America,Jacobs Family,98.03,35,49,Nature,1989
+Nihi Sumba,Sumba,Indonesia,Southeast Asia,Christopher Burch,98,36,28,Coastal,2001
+The Oberoi Mumbai,Mumbai,India,Southeast Asia,The Oberoi Group,98,36,337,Contemporary ,2004
+Tierra Atacama Hotel & Spa,San Pedro de Atacama,Chile,Latin America,Tierra Hotels,98,36,32,Nature,2011
+Viceroy Riviera Maya,Playa del Carmen,Mexico,Latin America,Viceroy Hotel Group ,97.92,39,41,Coastal,2006
+St. Regis Istanbul,Istanbul,Turkey,Middle East,Marriott International,97.89,40,118,Contemporary ,2015
+Katikies Mykonos,Mikonos ,Greece,Europe,Nikos Pagonis,97.87,41,36,Coastal,2018
+The Lanesborough,London,England,Europe,Oetker Collection,97.87,41,93,Palace,1991
+Mandarin Oriental Bangkok,Bangkok,Thailand,Southeast Asia,Jardine Matheson,97.87,41,331,Contemporary ,1876
+The Roundtree,Amagansett,United States,North America,Sylvia Wong,97.87,41,10,Nature,2020
+Mashpi Lodge,Quito,Ecuador,Latin America,Roque Sevilla,97.76,45,24,Nature,2012
+Angama Mara,Mara Triangle,Kenya,Africa,Nicky and Steve Fitzgerald ,97.73,46,4,Safari,2015
+Raffles Istanbul,Istanbul,Turkey,Middle East,Accor,97.72,47,136,Contemporary ,2014
+Grand Hotel Excelsior Vittoria,Sorrento,Italy,Europe,Guido Fiorentino,97.71,48,79,Coastal,1834
+Sumaq Machu Picchu Hotel,Aguas Calientes,Peru,Latin America,Clabe Andina,97.68,49,62,Nature,2007
+Las Ventanas al Paraíso,San José del Cabo,Mexico,Latin America,Rosewood Hotel Group ,97.68,50,83,Coastal,1997
+The Oberoi Rajvilas,Jaipur,India,Southeast Asia,The Oberoi Group,97.66,51,54,Palace,1997
+Viceroy Chicago,Chicago,United States,North America,Viceroy Hotel Group ,97.66,51,180,Contemporary ,2017
+Gibb's Farm,Karatu,Tanzania,Africa,Rick and Judi,97.63,53,21,Nature,1929
+Singita Grumeti,Serengeti National Park,Tanzania,Africa,"Paul Tudor Jones, Luke Bailes",97.6,54,15,Safari,2013
+Four Seasons Bangkok,Bangkok,Thailand,Southeast Asia,Four Seasons,97.59,55,299,Contemporary ,2020
+The Goring,London,England,Europe,The Goring Family,97.57,56,69,Palace,1910
+The Lodge & Spa at Brush Creek Ranch,Wyoming,United States,North America,Bruce and Beth White,97.56,57,44,Nature,2010
+Taj Palace,New Delhi,India,Southeast Asia,India Hotels Company Limited,97.56,57,403,Palace,1903
+St. Regis Florence,Florence,Italy,Europe,Marriott International,97.52,59,99,Palace,1855
+Mandarin Oriental Paris,Paris,France,Europe,Jardine Matheson,97.5,60,135,Contemporary ,2011
+Matetsi Victoria Falls,Matetsi,Zimbabwe,Africa,John Gardiner,97.5,60,18,Safari,2016
+Round Hill Hotel and Villas,Montego Bay,Jamaica,Caribbean,Ralph Lauren,97.49,62,36,Coastal,1952
+Khwai River Lodge,Moremi Game Reserve,Botswana,Africa,LVMH,97.47,63,15,Safari,1971
+Soneva Jani,Noonu Atoll,Maldives,Southeast Asia,Soneva,97.45,64,24,Island,2016
+The Oberoi Amarvilas,Agra,India,Southeast Asia,The Oberoi Group,97.44,65,102,Palace,2000
+Inn of the Five Graces,Santa Fe,United States,North America,Relais & Châteaux,97.41,66,25,Contemporary ,1996
+"Zadun, a Ritz-Carlton Reserve",San José del Cabo,Mexico,Latin America,Marriott International,97.41,66,115,Coastal,2019
+Mfuwe Lodge,South Luangwa National Park,Zambia,Africa,The Bushcamp Company,97.33,68,18,Safari,1956
+InterContinental Bora Bora Resort & Thalasso Spa,Bora Bora,French Polynesia,Oceania,InterContinental Hotels Group,97.33,68,84,Island,2006
+Banyan Tree Cabo Marqués,Acapulco,Mexico,Latin America,Banyan Tree Holdings Limited,97.3,70,45,Coastal,2009
+Ngala Safari Lodge,Kruger National Park Area,South Africa,Africa,andBeyond,97.26,71,20,Safari,2020
+Sasaab,Samburu,Kenya,Africa,The Safari Collection,97.26,71,9,Safari,2007
+The Sukhothai Bangkok,Bangkok,Thailand,Southeast Asia,HKR International,97.25,73,210,Palace,1991
+The Oberoi Grand,Kolkata,India,Southeast Asia,The Oberoi Group,97.2,74,209,Palace,1890
+Hôtel Plaza Athénée,Paris,France,Europe,Brunei Investment Agency,97.18,75,154,Palace,1913
+Mahekal Beach Resort,Playa del Carmen,Mexico,Latin America,Mahekal Beach Resort,97.12,76,196,Coastal,1982
+The Fullerton Hotel Singapore,Singapore,Singapore,Southeast Asia,Precious Treasure Pte,97.11,77,400,Palace,2001
+Jade Mountain,Soufrière,St. Lucia,Caribbean,Nick Troubetzkoy,97.1,78,79,Nature,2006
+Casa Chameleon,Las Catalinas,Costa Rica,Caribbean,Nolan Reynolds International,97.05,79,21,Coastal,2020
+Hôtel Crillon Le Brave,Crillon-le-Brave,France,Europe,Maisons Pariente,97,80,34,Nature,1988
+Le Bristol Paris,Paris,France,Europe,Oetker Collection,97,80,190,Palace,1925
+"Mandapa, a Ritz-Carlton Reserve",Bali,Indonesia,Southeast Asia,Marriott International,97,80,60,Nature,2015
+Six Senses Laamu,Laamu Atoll,Maldives,Southeast Asia,Hotel Properties Limited,97,80,97,Island,2011
+Waldorf Astoria Maldives Ithaafushi,Ithaafushi Island,Maldives,Southeast Asia,Hilton,97,80,119,Island,2019
+The Wickaninnish Inn,British Columbia,Canada,North America,Wickaninnish Inn Ltd,97,80,75,Coastal,1996
+Penha Longa Resort,Sintra,Portugal,Europe,Marriott International,96.94,86,44,Nature,1993
+The St. Regis Bora Bora Resort,Bora Bora,French Polynesia,Oceania,Marriott International,96.89,87,90,Island,2006
+Lion Sands Game Reserve,Sabi Sand Game Reserve ,South Africa,Africa,MORE Family Collection,96.87,88,18,Safari,1933
+Rambagh Palace,Jaipur,India,Southeast Asia,India Hotels Company Limited,96.87,88,78,Palace,1835
+The Oyster Box,Umhlanga,South Africa,Africa,The Travel Corporation,96.85,90,86,Coastal,1947
+The Stafford,London,England,Europe,Britannia Hospitality Limited,96.75,91,107,Contemporary ,1912
+"Tambo del Inka, a Luxury Collection Resort & Spa",Urubamba ,Peru,Latin America,Marriott International,96.74,92,128,Nature,2010
+Cap Maison,Gros Islet,St. Lucia,Caribbean,Cap Maison Limited,96.73,93,49,Coastal,2008
+Tensing Pen,Negril,Jamaica,Caribbean,Sam Petros,96.73,93,22,Coastal,1975
+Hôtel Le Toiny,Anse de Toiny,St. Barthélemy,Caribbean, Charlie and Mandie Vere Nicoll,96.71,95,22,Coastal,1992
+Rosewood Mayakoba,Playa del Carmen,Mexico,Latin America,Rosewood Hotel Group ,96.7,96,129,Coastal,2007
+Canaves Oia Boutique Hotel,Santorini,Greece,Europe,The Chaidemenos' Family,96.69,97,18,Coastal,1995
+Montage Los Cabos,Cabo San Lucas,Mexico,Latin America,Montage International,96.68,98,122,Coastal,2018
+Badrutt's Palace Hotel,St. Moritz,Switzerland,Europe,Hansjürg and Anikó Badrutt.,96.67,99,157,Nature,1896
+Finca Cortesin Hotel Golf & Spa,Málaga,Spain,Europe,Finca Cortesin,96.63,100,67,Nature,2009
