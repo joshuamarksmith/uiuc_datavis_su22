@@ -1,7 +1,7 @@
 async function init() {
     const margin = { top: 30, bottom: 30, right: 30, left: 30 },
         width = 900 - margin.left - margin.right,
-        height = 600 - margin.top - margin.bottom - 50; // subtract 50 to account for labels
+        height = 600 - margin.top - margin.bottom - 50; // subtract 50 to account for slanted labels
 
     const x = d3.scaleBand()
         .range([0, width])
@@ -32,7 +32,7 @@ async function init() {
                 var region = d.Region;
                 
                 if (regionCount[region] === undefined) {
-                    regionCount[region] = 0;
+                    regionCount[region] = 1;
                 }
                 else {
                     regionCount[region] = regionCount[region] + 1;

@@ -5,12 +5,20 @@
   <title>Travel and Leisure 2021</title>
 </head>
 <script src='https://d3js.org/d3.v5.min.js'></script>
+<script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
 <script src='scripts/barchart.js'></script>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
 <body onload='init()'>	
     <div class="container">
         <h1>Analysis of the Travel + Leisure Top Hotels of 2021 </h1>
+        <h2>Top hotels by geographic region</h2>
+        <p>
+            The data for this narrative visualization comes from 
+            <a href="https://www.kaggle.com/datasets/narmelan/travelleisure-worlds-best-hotels-2021?resource=download">Kaggle</a>. 
+            The data is formatted and presented using <a href="https://d3js.org/">d3.js</a>.
+
+        </p>
         <p>
             This first chart shows the distribution of hotels by region.
             You can see from the chart that there is a concentration of hotels in Asia and Europe; 
@@ -18,11 +26,13 @@
         </p>
 
         <svg width=900 height=600></svg> 
-        <br></br>
-        <div class="center">
-            <a href="#" class="previous">&laquo; Previous</a>
+        <div class="navigation">
             <a href="scatter.html" class="next">Next &raquo;</a>
         </div>
+        <div class="author">
+            <p>Created by <a href="https://github.com/joshuamarksmith">Joshua M. Smith</a></p>
+        </div>
     </div>
+
 </body>
 </html>

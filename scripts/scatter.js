@@ -1,13 +1,11 @@
 async function init() {
-    const margin = { top: 30, bottom: 30, right: 30, left: 30 },
+    const margin = { top: 30, bottom: 30, right: 30, left: 40 },
         width = 900 - margin.left - margin.right,
-        height = 600 - margin.top - margin.bottom - 50; // subtract 50 to account for labels
+        height = 600 - margin.top - margin.bottom;
 
-    const x = d3.scaleBand()
-        .range([0, width])
-        .padding(0.15);
-    const y = d3.scaleLinear()
-        .range([height, 0]);
+    let x = d3.scaleLinear().range([0, width])
+
+    let y = d3.scaleLinear().range([height-40, 0]); // leave room for label
 
     const svg = d3.select("svg")
         .append("g")
@@ -25,100 +23,77 @@ async function init() {
     let data = await d3.csv("100_hotels.csv")
         .then(function(data) {
 
-            var regionCount = {};
-
-            // count occurrence of each region
-            data.forEach((d) => {
-                var region = d.Region;
-                
-                if (regionCount[region] === undefined) {
-                    regionCount[region] = 0;
-                }
-                else {
-                    regionCount[region] = regionCount[region] + 1;
-                }
-            });
-            data.forEach((d) => {
-                var region = d.Region;
-                d.count = regionCount[region];
-                // console.log(`region: ${region}: count of ${d.count}`);
-            })
-                
             // set domains based on data
-            x.domain(data.map(function(d) { return d.Region; }));
-            y.domain([0, d3.max(data, function(d) { return d.count; })]);
+            x.domain(d3.extent(data, function(d) { return d.Year }));
+            y.domain(d3.extent(data, function(d) { return d.Score }));
 
-            // bar chart
-            svg.selectAll(".bar")
+            let circles = svg.selectAll('circle')
                 .data(data)
                 .enter()
-                .append("rect")
-                    .attr("class", "bar")
-                    .attr("x", function(d) { return x(d.Region); })
-                    .attr("width", x.bandwidth())
-                    .attr("y", function(d) { return y(0); })
-                    .attr("height", function(d) { return height - y(0); })
-                    .on("mouseover", function(d, i) { 
-                        tooltip.transition().duration(200)
-                            .style('opacity', 0.9)
-                            tooltip.text(`The region ${d.Region} has ${d.count} award-winning hotels.`);
-                    })
-                    .on("mousemove", function(){
-                        return tooltip
-                            .style("top", (d3.event.pageY-10)+"px")
-                            .style("left",(d3.event.pageX+10)+"px");
-                    })
-                    .on("mouseout", function(d) {
-                        tooltip.transition().duration(400)
-                            .style('opacity', 0);
-                    });
-            
+                .append('circle')
+                .attr("class", "cir")
+                .attr('stroke','black')
+                .attr('stroke-width',1)
+                .on("mouseover", function(d, i) { 
+                    tooltip.transition().duration(200)
+                        .style('opacity', 0.9)
+                        tooltip.text(`${d.Hotel}, built in ${d.Year} in ${d.Country} with ${d.Rooms} rooms and a ${d.Score} rating.`);
+                })
+                .on("mousemove", function(){
+                    return tooltip
+                        .style("top", (d3.event.pageY-10)+"px")
+                        .style("left",(d3.event.pageX+10)+"px");
+                })
+                .on("mouseout", function(d) {
+                    tooltip.transition().duration(400)
+                        .style('opacity', 0);
+                });
+                // attr('fill',function (d,i) { return colorScale(i) })
+                
             // animation
-            svg.selectAll("rect")    
+            svg.selectAll("circle")    
                 .transition()
-                .duration(1200)
-                .attr("y", function(d) { return y(d.count); })
-                .attr("height", function(d) { return height - y(d.count); })
-                .delay(function(d,i){ return(i*20) });
+                .duration(600)
+                .attr('cx', function (d) { console.log(`${d.Hotel}, ${d.Year}`); return x(d.Year) })
+                .attr('cy',function (d) { return y(d.Score) })
+                .attr('r', function (d) { return (d.Rooms / 15) })
+                .delay(function(d,i){ return(i*15) });
             
             // axes
             svg.append("g")
                 .attr("class", "axis")  
                 .attr("transform", "translate(0," + height + ")")
-                .call(d3.axisBottom(x))
-                .selectAll("text")
-                    .attr("transform", "translate(-10,0)rotate(-45)")
-                    .style("text-anchor", "end");
-        
+                .call(d3.axisBottom(x)
+                    .tickFormat(d3.format("d")))
+                
             svg.append("g")
                 .attr("class", "axis")
-                .call(d3.axisLeft(y));
+                .call(d3.axisLeft(y))
+            
+            // labels
+/*             svg.append("text")
+                .attr("class", "x-label")
+                .attr("text-anchor", "end")
+                .attr("x", (width / 2 + 60))
+                .attr("y", height + 50)
+                .text("Year of construction"); */
 
-            let annotation_def = [{
-                    anno: {
-                        label: "Southeast Asia contains the most award-winning hotels.",
-                        title: regionCount["Southeast Asia"],
-                        align: "left"
-                    },
-                    x: 112.5,
-                    y: 0,
-                    dy: 100,
-                    dx: 100,
-                    subject: { radius: 50, radiusPadding: 10 },
-                }];
-            let annotate = d3.annotate()
-                .type(d3.annotationLabel)
-                .annotations(annotation_def)
-                setTimeout(function() {
-                    d3.select("svg")
-                        .append("g")
-                        .attr("transform", "translate(50,50)")
-                        .attr("class", "annotation-group")
-                        .call(annotate)
-                }, 1000);
+            svg.append("text")
+                .attr("class", "x-label")
+                .attr("text-anchor", "end")
+                .attr("x", width)
+                .attr("y", height - 6)
+                .text("Year of construction");
+            
+            svg.append("text")
+                .attr("class", "y-label")
+                .attr("text-anchor", "end")
+                .attr("y", 6)
+                .attr("dy", ".75em")
+                .attr("transform", "rotate(-90)")
+                .text("Score (0-100 Scale)");
+
 
         }) .catch(error => console.error(error));
-
-
 
 }
