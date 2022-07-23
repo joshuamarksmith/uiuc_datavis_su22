@@ -1,9 +1,74 @@
-.bar { fill: steelblue; }
+.container {
+    width: 900px;
+    height: 750px;
+}
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
   }
 
-.axis { font-size: 80%; }
+p {
+    padding-left: 10px;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+.bar { 
+    fill: steelblue; 
+}
+
+.axis { 
+    font-size: 80%; 
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding: 8px 16px;
+}
+  
+a:hover {
+background-color: #ddd;
+color: black;
+}
+  
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+
+.previous {
+    background-color: #f1f1f1;
+    color: black;
+    border-radius: 8px;
+    margin-right: 5px;
+}
+
+.next {
+    background-color: #04AA6D;
+    color: white;
+    border-radius: 8px;
+    margin-left: 5px;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    height: 20px;
+    padding: 2px;
+    font: 80% sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+rect:hover {
+    fill: lightsteelblue;
+}
