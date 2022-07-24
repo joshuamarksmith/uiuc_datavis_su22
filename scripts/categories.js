@@ -1,3 +1,4 @@
+// global dictionary to store radii of scatter circles, needed to remember after hiding them
 radii = {};
 
 async function init() {
@@ -22,6 +23,7 @@ async function init() {
         "Safari": "#74B72E"
     };
 
+    // hover tooltip
     let tooltip = d3.select("body")
         .append("div")
         .attr("class", "tooltip")
@@ -38,6 +40,7 @@ async function init() {
             x.domain(d3.extent(data, function(d) { return d.Year }));
             y.domain(d3.extent(data, function(d) { return d.Score }));
 
+            // circles for scatter
             let circles = svg.selectAll('circle')
                 .data(data)
                 .enter()
@@ -106,7 +109,7 @@ async function init() {
         .on("change", update);
     update();
     
-            // annotation
+    // helpful annotation
     const annotations = [{
         note: {
             label: "Try unchecking the \'Coastal\' box.",
@@ -124,6 +127,7 @@ async function init() {
     const makeAnnotations = d3.annotation()
         .annotations(annotations)
     svg.append("g")
+        .attr("class", "help-annotation")
         .call(makeAnnotations)
 
 }
@@ -134,6 +138,7 @@ async function init() {
 function update() {
     const svg = d3.select("svg");
     
+    // remove the unwanted circles
     d3.selectAll(".checkbox")
         .each(function(d) {
             cb = d3.select(this);
@@ -155,6 +160,9 @@ function update() {
                     .attr("r", 0);
             }
     })
+
+    // help no longer needed to find checkboxes
+    svg.selectAll(".help-annotation").remove();
 }
 
 

@@ -10,7 +10,8 @@ async function init() {
     const svg = d3.select("svg")
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-        
+    
+    // hover tooltip
     let tooltip = d3.select("body")
         .append("div")
         .attr("class", "tooltip")
@@ -27,6 +28,7 @@ async function init() {
             x.domain(d3.extent(data, function(d) { return d.Year }));
             y.domain(d3.extent(data, function(d) { return d.Score }));
 
+            // circles for scatter
             let circles = svg.selectAll('circle')
                 .data(data)
                 .enter()
