@@ -36,6 +36,7 @@ async function init() {
                 .attr("class", "cir")
                 .attr('stroke','black')
                 .attr('stroke-width',1)
+                .attr('cy',function (d) { return y(d.Score) }) // start points already y-aligned
                 .on("mouseover", function(d, i) { 
                     tooltip.transition().duration(200)
                         .style('opacity', 0.9)
