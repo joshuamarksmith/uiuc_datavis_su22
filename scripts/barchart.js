@@ -93,7 +93,14 @@ async function init() {
             svg.append("g")
                 .attr("class", "axis")
                 .call(d3.axisLeft(y));
-
+                
+            svg.append("text")
+                .attr("class", "y-label")
+                .attr("text-anchor", "end")
+                .attr("y", 6)
+                .attr("dy", ".75em")
+                .attr("transform", "rotate(-90)")
+                .text("Number of Hotels");
 
             // annotation
             const annotations = [{
