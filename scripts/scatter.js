@@ -93,6 +93,23 @@ async function init() {
                 .attr("transform", "rotate(-90)")
                 .text("Score (0-100 Scale)");
 
+            // annotation
+            const annotations = [{
+                    note: {
+                        label: "Grand Hotel Excelsior Vittoria in Sorrento, Italy is the oldest top 100 hotel in the world.",
+                        title: "A Winner from 1834",
+                        wrap: 150
+                    },
+                    x: 10,
+                    y: 320,
+                    dy: -160,
+                    dx: 110,
+                }];
+
+            const makeAnnotations = d3.annotation()
+                .annotations(annotations)
+            svg.append("g")
+                .call(makeAnnotations)
 
         }) .catch(error => console.error(error));
 

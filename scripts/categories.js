@@ -105,6 +105,27 @@ async function init() {
     d3.selectAll(".checkbox")
         .on("change", update);
     update();
+    
+            // annotation
+    const annotations = [{
+        note: {
+            label: "Try unchecking the \'Coastal\' box.",
+            wrap: 1200
+        },
+        x: 205,
+        y: -25,
+        dy: 40,
+        dx: 60,
+        connector: {
+            end: "arrow"
+        }
+    }];
+
+    const makeAnnotations = d3.annotation()
+        .annotations(annotations)
+    svg.append("g")
+        .call(makeAnnotations)
+
 }
 
 /*
@@ -123,7 +144,7 @@ function update() {
                 svg.selectAll("." + theme)
                     .transition()
                     .duration(1000)
-                    .style("opacity", '90%')
+                    .style("opacity", 1)
                     .attr("r", function(d){ console.log(`${d.Theme}`); return radii[d.Hotel] });
             }
             else {

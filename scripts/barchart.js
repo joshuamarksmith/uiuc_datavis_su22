@@ -94,28 +94,24 @@ async function init() {
                 .attr("class", "axis")
                 .call(d3.axisLeft(y));
 
-            let annotation_def = [{
-                    anno: {
-                        label: "Southeast Asia contains the most award-winning hotels.",
-                        title: regionCount["Southeast Asia"],
-                        align: "left"
-                    },
-                    x: 112.5,
-                    y: 0,
-                    dy: 100,
-                    dx: 100,
-                    subject: { radius: 50, radiusPadding: 10 },
-                }];
-            let annotate = d3.annotate()
-                .type(d3.annotationLabel)
-                .annotations(annotation_def)
-                setTimeout(function() {
-                    d3.select("svg")
-                        .append("g")
-                        .attr("transform", "translate(50,50)")
-                        .attr("class", "annotation-group")
-                        .call(annotate)
-                }, 1000);
+
+            // annotation
+            const annotations = [{
+                note: {
+                    label: "Southeast Asia has the most award-winning hotels, at 26.",
+                    title: "Hotels Abound",
+                    wrap: 150
+                },
+                x: 380,
+                y: 5,
+                dy: 70,
+                dx: 180
+            }];
+
+        const makeAnnotations = d3.annotation()
+            .annotations(annotations)
+        svg.append("g")
+            .call(makeAnnotations)
 
         }) .catch(error => console.error(error));
 
