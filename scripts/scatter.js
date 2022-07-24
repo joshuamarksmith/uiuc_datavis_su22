@@ -51,7 +51,6 @@ async function init() {
                     tooltip.transition().duration(400)
                         .style('opacity', 0);
                 });
-                // attr('fill',function (d,i) { return colorScale(i) })
                 
             // animation
             svg.selectAll("circle")    
@@ -72,14 +71,6 @@ async function init() {
             svg.append("g")
                 .attr("class", "axis")
                 .call(d3.axisLeft(y))
-            
-            // labels
-/*             svg.append("text")
-                .attr("class", "x-label")
-                .attr("text-anchor", "end")
-                .attr("x", (width / 2 + 60))
-                .attr("y", height + 50)
-                .text("Year of construction"); */
 
             svg.append("text")
                 .attr("class", "x-label")
