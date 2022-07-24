@@ -17,6 +17,12 @@ p, .x-label, .y-label {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+li {
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90%;
+}
+
 .bar { 
     fill: steelblue;  
 }
@@ -79,7 +85,7 @@ a:hover {
     align-items: center;
 }
 
-.button-category {
+.checkbox {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,15 +94,11 @@ a:hover {
     text-align: center;
     display: inline-block;
     padding: 8px 10px;
-    background-color: #f1f1f1;
+    background-color: steelblue;
     color: black;
     border-radius: 8px;
-    margin-right: 5px;
-    margin-left: 5px;
-}
-
-.button-category:hover {
-    background-color: lightsteelblue;
+    margin-right: 3px;
+    margin-left: 15px;
 }
 
 .tooltip {

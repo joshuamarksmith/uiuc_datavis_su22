@@ -5,7 +5,7 @@
   <title>TL2021 Scatter Plot</title>
 </head>
 <script src='https://d3js.org/d3.v5.min.js'></script>
-<script src='scripts/scatter.js'></script>
+<script src='scripts/categories.js'></script>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
 <body onload='init()'>	
@@ -13,17 +13,35 @@
         <h1>Analysis of the Travel + Leisure Top Hotels of 2021 </h1>
         <h2>To be determined</h2>
         <p>
-            This third chart illustrates the _____ across different categories of hotel. 
-            Click the buttons below to filter the data by category and see _________.
+            This third chart illustrates the ratings across different categories of hotel,
+            and here you get some room to explore. Try unchecking and checking different boxes 
+            to see some key differences. For example: <br>
+            <ul>
+                <li>Safari hotels are extremely small compared to other categories, even smaller than islands</li>
+                <li>There is only one highly rated "contemporary" hotel built before 1900</li>
+                <li>All island hotels were constructed in roughly the last 25 years</li>
+                <li>Find your own fun facts!</li>
+              </ul>
         </p>
+
+        <!-- Button -->
         <div class="category-selection">
+            <input type="checkbox" class="checkbox" value="Coastal" checked><label>Coastal</label>
+            <input type="checkbox" class="checkbox" value="Contemporary " checked><label>Contemporary</label>
+            <input type="checkbox" class="checkbox" value="Island" checked><label>Island</label>
+            <input type="checkbox" class="checkbox" value="Nature" checked><label>Nature</label>
+            <input type="checkbox" class="checkbox" value="Palace" checked><label>Palace</label>
+            <input type="checkbox" class="checkbox" value="Safari" checked><label>Safari</label>
+            
+        </div>
+        <!-- <div class="category-selection">
             <a href="#" class="button-category" id="coastal">Coastal</a>
             <a href="#" class="button-category" id="contemporary">Contemporary</a>
             <a href="#" class="button-category" id="island">Island</a>
             <a href="#" class="button-category" id="nature">Nature</a>
             <a href="#" class="button-category" id="palace">Palace</a>
             <a href="#" class="button-category" id="safari">Safari</a>
-        </div>
+        </div> -->
 
         <svg width=900 height=600></svg> 
         <div class="navigation">

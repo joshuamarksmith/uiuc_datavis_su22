@@ -1,3 +1,5 @@
+radii = {};
+
 async function init() {
     const margin = { top: 30, bottom: 30, right: 30, left: 40 },
         width = 900 - margin.left - margin.right,
@@ -11,6 +13,15 @@ async function init() {
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
         
+    const colors = {
+        "Coastal": "#083d77",
+        "Contemporary ": "#ebebd3",
+        "Island":"#da4167", 
+        "Nature": "#f4d35e",
+        "Palace": "#f78764", 
+        "Safari": "#74B72E"
+    };
+
     let tooltip = d3.select("body")
         .append("div")
         .attr("class", "tooltip")
@@ -31,13 +42,14 @@ async function init() {
                 .data(data)
                 .enter()
                 .append('circle')
-                .attr("class", "cir")
+                //.attr("class", "cir")
                 .attr('stroke','black')
                 .attr('stroke-width',1)
+                .attr('fill', function (d) { return colors[d.Theme] })
                 .on("mouseover", function(d, i) { 
                     tooltip.transition().duration(200)
                         .style('opacity', 0.9)
-                        tooltip.text(`${d.Hotel}, built in ${d.Year} in ${d.Country} with ${d.Rooms} rooms and a ${d.Score} rating.`);
+                        tooltip.text(`${d.Hotel} is a ${d.Theme} hotel in ${d.Country} with ${d.Rooms} rooms.`);
                 })
                 .on("mousemove", function(){
                     return tooltip
@@ -48,15 +60,17 @@ async function init() {
                     tooltip.transition().duration(400)
                         .style('opacity', 0);
                 });
-                // attr('fill',function (d,i) { return colorScale(i) })
+               
                 
             // animation
             svg.selectAll("circle")    
                 .transition()
                 .duration(500)
-                .attr('cx', function (d) { console.log(`${d.Hotel}, ${d.Year}`); return x(d.Year) })
+                .attr("class" , function(d) { return d.Theme })
+                .attr('cx', function (d) { return x(d.Year) })
                 .attr('cy',function (d) { return y(d.Score) })
-                .attr('r', function (d) { return (d.Rooms / 11) }) // 11 to fit on page
+                .attr('r', function (d,i) { radii[d.Hotel] = (d.Rooms / 11); return (d.Rooms / 11) })
+                .attr('opacity', '90%')
                 .delay(function(d,i){ return(i*15) });
             
             // axes
@@ -69,14 +83,6 @@ async function init() {
             svg.append("g")
                 .attr("class", "axis")
                 .call(d3.axisLeft(y))
-            
-            // labels
-/*             svg.append("text")
-                .attr("class", "x-label")
-                .attr("text-anchor", "end")
-                .attr("x", (width / 2 + 60))
-                .attr("y", height + 50)
-                .text("Year of construction"); */
 
             svg.append("text")
                 .attr("class", "x-label")
@@ -93,7 +99,42 @@ async function init() {
                 .attr("transform", "rotate(-90)")
                 .text("Score (0-100 Scale)");
 
-
         }) .catch(error => console.error(error));
 
+    // monitor and initialize checkboxes
+    d3.selectAll(".checkbox")
+        .on("change", update);
+    update();
 }
+
+/*
+ * Add and remove circles with checkboxes
+ */
+function update() {
+    const svg = d3.select("svg");
+    
+    d3.selectAll(".checkbox")
+        .each(function(d) {
+            cb = d3.select(this);
+            theme = cb.property("value");
+
+            if(cb.property("checked")) {
+                console.log(`${theme} is selected...`);
+                svg.selectAll("." + theme)
+                    .transition()
+                    .duration(1000)
+                    .style("opacity", '90%')
+                    .attr("r", function(d){ console.log(`${d.Theme}`); return radii[d.Hotel] });
+            }
+            else {
+                svg.selectAll("." + theme)
+                    .transition()
+                    .duration(1000)
+                    .style("opacity", 0)
+                    .attr("r", 0);
+            }
+    })
+}
+
+
+
