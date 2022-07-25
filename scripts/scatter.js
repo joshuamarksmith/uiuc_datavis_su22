@@ -10,7 +10,18 @@ async function init() {
     const svg = d3.select("svg")
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-    
+   
+    const colors = { 
+        "Africa": "#ff6961",
+        "Asia": "#ffb480",
+        "Caribbean": "#f8f38d",
+        "Europe": "#42d6a4",
+        "Latin America": "#08cad1",
+        "Middle East": "#59adf6",
+        "North America": "#9d94ff",
+        "Oceania": "#3c1414",
+        "Southeast Asia": "#c780e8"
+    };
     // hover tooltip
     let tooltip = d3.select("body")
         .append("div")
@@ -36,6 +47,7 @@ async function init() {
                 .attr("class", "cir")
                 .attr('stroke','black')
                 .attr('stroke-width',1)
+                .attr('fill', function (d) { return colors[d.Region] })
                 .attr('cy',function (d) { return y(d.Score) }) // start points already y-aligned
                 .on("mouseover", function(d, i) { 
                     tooltip.transition().duration(200)

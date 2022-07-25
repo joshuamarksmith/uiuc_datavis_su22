@@ -12,7 +12,19 @@ async function init() {
     const svg = d3.select("svg")
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-        
+    
+    const colors = { 
+        "Africa": "#ff6961",
+        "Asia": "#ffb480",
+        "Caribbean": "#f8f38d",
+        "Europe": "#42d6a4",
+        "Latin America": "#08cad1",
+        "Middle East": "#59adf6",
+        "North America": "#9d94ff",
+        "Oceania": "#3c1414",
+        "Southeast Asia": "#c780e8"
+    };
+
     let tooltip = d3.select("body")
         .append("div")
         .attr("class", "tooltip")
@@ -58,6 +70,7 @@ async function init() {
                     .attr("width", x.bandwidth())
                     .attr("y", function(d) { return y(0); })
                     .attr("height", function(d) { return height - y(0); })
+                    .attr('fill', function (d) { return colors[d.Region] })
                     .on("mouseover", function(d, i) { 
                         tooltip.transition().duration(200)
                             .style('opacity', 0.9)

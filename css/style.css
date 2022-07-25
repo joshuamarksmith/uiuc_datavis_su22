@@ -23,14 +23,6 @@ li {
     font-size: 90%;
 }
 
-.bar { 
-    fill: steelblue;  
-}
-
-.cir {
-    fill: steelblue; 
-}
-
 .axis { 
     font-size: 80%; 
     font-weight: bold;
@@ -113,6 +105,34 @@ a:hover {
     pointer-events: none;
 }
 
-rect:hover {
-    fill: lightsteelblue;
+/* Checkbox colors */
+.coastal-checkbox {
+    accent-color: #537c78;
+    height: 16px;
+    width: 16px;
+}
+.contemporary-checkbox {
+    accent-color: #7ba591;
+    height: 16px;
+    width: 16px;
+}
+.island-checkbox {
+    accent-color: #cc222b;
+    height: 16px;
+    width: 16px;
+}
+.nature-checkbox {
+    accent-color: #f15b4c;
+    height: 16px;
+    width: 16px;
+}
+.palace-checkbox {
+    accent-color: #faa41b;
+    height: 16px;
+    width: 16px;
+}
+.safari-checkbox {
+    accent-color: #ffd45b;
+    height: 16px;
+    width: 16px;
 }

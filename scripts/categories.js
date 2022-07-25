@@ -15,12 +15,12 @@ async function init() {
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
         
     const colors = {
-        "Coastal": "#083d77",
-        "Contemporary ": "#ebebd3",
-        "Island":"#da4167", 
-        "Nature": "#f4d35e",
-        "Palace": "#f78764", 
-        "Safari": "#74B72E"
+        "Coastal": "#537c78",
+        "Contemporary ": "#7ba591",
+        "Island":"#cc222b", 
+        "Nature": "#f15b4c",
+        "Palace": "#faa41b", 
+        "Safari": "#ffd45b"
     };
 
     // hover tooltip
@@ -53,7 +53,7 @@ async function init() {
                 .on("mouseover", function(d, i) { 
                     tooltip.transition().duration(200)
                         .style('opacity', 0.9)
-                        tooltip.text(`${d.Hotel} is a ${d.Theme} hotel in ${d.Country} with ${d.Rooms} rooms.`);
+                        tooltip.text(`${d.Hotel} is a ${d.Theme} hotel built in ${d.Year}, in ${d.Country}, with ${d.Rooms} rooms.`);
                 })
                 .on("mousemove", function(){
                     return tooltip
@@ -130,7 +130,6 @@ async function init() {
     svg.append("g")
         .attr("class", "help-annotation")
         .call(makeAnnotations)
-
 }
 
 /*
