@@ -68,7 +68,7 @@ async function init() {
             svg.selectAll("circle")    
                 .transition()
                 .duration(500)
-                .attr('cx', function (d) { console.log(`${d.Hotel}, ${d.Year}`); return x(d.Year) })
+                .attr('cx', function (d) { return x(d.Year) })
                 .attr('cy',function (d) { return y(d.Score) })
                 .attr('r', function (d) { return (d.Rooms / 11) }) // 11 to fit on page
                 .delay(function(d,i){ return(i*15) });
@@ -99,23 +99,38 @@ async function init() {
                 .attr("transform", "rotate(-90)")
                 .text("Score (0-100 Scale)");
 
-            // annotation
-            const annotations = [{
-                    note: {
-                        label: "Grand Hotel Excelsior Vittoria in Sorrento, Italy is the oldest top 100 hotel in the world.",
-                        title: "A Winner from 1834",
-                        wrap: 150
-                    },
-                    x: 10,
-                    y: 320,
-                    dy: -160,
-                    dx: 110,
-                }];
+            // annotations
+            const annotation_one = [{
+                note: {
+                    label: "Grand Hotel Excelsior Vittoria in Sorrento, Italy is the oldest top 100 hotel in the world.",
+                    title: "A Winner from 1834",
+                    wrap: 150
+                },
+                x: 10,
+                y: 320,
+                dy: -160,
+                dx: 110,
+            }];
+            const annotation_two = [{
+                note: {
+                    label: "Mahali Mzuri in Kenya is the highest rated hotel in the world!",
+                    title: "The Current Champion",
+                    wrap: 230
+                },
+                x: 792,
+                y: 2,
+                dy: 20,
+                dx: -110,
+            }];
 
-            const makeAnnotations = d3.annotation()
-                .annotations(annotations)
+            let makeAnnotationsOne = d3.annotation()
+                .annotations(annotation_one)
+            let makeAnnotationsTwo = d3.annotation()
+                .annotations(annotation_two)
             svg.append("g")
-                .call(makeAnnotations)
+                .call(makeAnnotationsOne)
+            svg.append("g")
+                .call(makeAnnotationsTwo)
 
         }) .catch(error => console.error(error));
 
