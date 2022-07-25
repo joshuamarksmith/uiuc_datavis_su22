@@ -1,6 +1,6 @@
 # UIUC Final Project for Data Visualization
 
-This is a narrative visualization with three scenes, written in [d3.js](https://d3js.org/).
+This is a narrative visualization with three scenes exploring the top-rated hotels in the world, correlation with the years they were constructed and the theme of the hotel, as well as how those factors affect their ratings. The charts are built with [d3.js](https://d3js.org/).
 
 Submitted for completion of the course Data Visualization as part of the Master of Computer Science program at University of Illinois Urbana-Champaign.
 
