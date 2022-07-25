@@ -9,3 +9,7 @@ The data for this project is the [Travel+Leisure](https://www.travelandleisure.c
 # Preview
 
 ![a quick demo](demo.gif)
+
+# Accessing the Visualization
+
+The visualization is hosted here on [Github Pages](https://joshuamarksmith.github.io/uiuc_datavis_su22/).
